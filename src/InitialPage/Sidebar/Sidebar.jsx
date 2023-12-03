@@ -34,7 +34,7 @@ const Sidebar = () => {
   const mutuation = useMutate();
   const [loading, setLoading] = useState(false);
 
-  console.log(userProfile);
+  // console.log(userProfile);
 
   const whatsappLink = () => {
     const url =
