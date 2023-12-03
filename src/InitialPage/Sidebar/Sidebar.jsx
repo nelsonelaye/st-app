@@ -15,13 +15,14 @@ import {
 } from "../../EntryFile/imagePath";
 import { Link, useHistory } from "react-router-dom";
 import { Scrollbars } from "react-custom-scrollbars";
+import toast from "react-hot-toast";
+
 import Cookies from "js-cookie";
 import useAuthContext from "../../../hooks/useAuth";
 import whatsappSvg from "../../../src/assets/img/icons/whatsapp.svg";
 import houseSvg from "../../../src/assets/img/icons/house.svg";
 import mailSvg from "../../../src/assets/img/icons/mail.svg";
 import { useMutate } from "../../../hooks/useMutate";
-import toast from "react-hot-toast";
 import { LoadingAbsolute } from "../../components/Loading";
 import { useCurrentUserProfile } from "../../../hooks/useGetProfile";
 
@@ -184,7 +185,7 @@ const Sidebar = () => {
               onMouseOver={expandMenuOpen}
             >
               <ul>
-                {user.planName && (
+                {user?.planName && (
                   <li className="active">{userProfile?.data?.planName}</li>
                 )}
 
